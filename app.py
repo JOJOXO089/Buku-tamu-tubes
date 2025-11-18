@@ -4,7 +4,7 @@ from google.oauth2.service_account import Credentials
 from datetime import datetime
 import pandas as pd
 
-st.set_page_config(page_title="Buku Tamu", layout="centered")
+st.set_page_config(page_title="Buku Tamu Digital", layout="centered")
 
 # ==========================
 # 1. Google Sheets Connector
@@ -79,4 +79,5 @@ elif menu == "Lihat Data Tamu":
 
         csv = df.to_csv(index=False).encode('utf-8')
         st.download_button("⬇ Download CSV", csv, "data_buku_tamu.csv", "text/csv")
+
 
